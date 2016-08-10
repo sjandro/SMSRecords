@@ -26,6 +26,7 @@ public class MessageLogs extends RecyclerView.Adapter<MessageLogs.ViewHolder> {
     String contactNumber;
     String myNum;
     SMSDictionary records;
+    //test
 
     public View view;
 
