@@ -18,5 +18,6 @@ public class SendDataToDatabaseBackgroundBroadcast extends BroadcastReceiver {
             Utilities utilities = new Utilities();
             utilities.fetchInbox(context);
         }
+        //some comment
     }
 }
