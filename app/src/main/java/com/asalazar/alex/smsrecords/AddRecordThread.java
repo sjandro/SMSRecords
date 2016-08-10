@@ -57,28 +57,28 @@ public class AddRecordThread implements Runnable {
         }
     }
 
-    public String sendToDatabase(String number, String myNumber) throws IOException {
-        BufferedReader in = null;
-        String data = null;
-
-        try{
-            System.out.println("In downloadUrl!");
-            HttpClient httpclient = new DefaultHttpClient();
-            HttpGet request = new HttpGet();
-            URI website = new URI("http://107.170.82.86/SMS?key=alex_8138431896&action=insert_entry&hash="+number+"&sr="+sr+"&date="+date+"&text="+text+"&users_id="+myNumber);
-            request.setURI(website);
-            HttpResponse response = httpclient.execute(request);
-            in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
-            System.out.println("(AddRecord)HTTP output: " + in.readLine());
-
-            return in.readLine();
-        }
-        catch(Exception e){
-            System.out.println("Error in http connection " + e.toString());
-        }
-
-        return "unsuccessful";
-    }
+//    public String sendToDatabase(String number, String myNumber) throws IOException {
+//        BufferedReader in = null;
+//        String data = null;
+//
+//        try{
+//            System.out.println("In downloadUrl!");
+//            HttpClient httpclient = new DefaultHttpClient();
+//            HttpGet request = new HttpGet();
+//            URI website = new URI("http://107.170.82.86/SMS?key=alex_8138431896&action=insert_entry&hash="+number+"&sr="+sr+"&date="+date+"&text="+text+"&users_id="+myNumber);
+//            request.setURI(website);
+//            HttpResponse response = httpclient.execute(request);
+//            in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+//            System.out.println("(AddRecord)HTTP output: " + in.readLine());
+//
+//            return in.readLine();
+//        }
+//        catch(Exception e){
+//            System.out.println("Error in http connection " + e.toString());
+//        }
+//
+//        return "unsuccessful";
+//    }
 
     public void sendJsonToDatabase() throws IOException{
         BufferedReader in = null;
@@ -87,17 +87,14 @@ public class AddRecordThread implements Runnable {
             ArrayList<NameValuePair> nameValuePairsList = new ArrayList<>();
 
             String postUrl = "http://107.170.82.86/post";// put in your url
-            //String postUrl = "http://localhost:5000/post";// put in your url
 
             Gson gson = new Gson();
             HttpClient httpClient = new DefaultHttpClient();
             httpClient.getParams().setBooleanParameter("http.protocol.expect-continue", false);
             HttpPost post = new HttpPost(postUrl);
             System.out.println(gson.toJson(mySMSRecordObj));
-            //StringEntity postingString = new StringEntity(gson.toJson(mySMSRecordObj));
             nameValuePairsList.add(new BasicNameValuePair("data", gson.toJson(mySMSRecordObj)));
             post.setEntity(new UrlEncodedFormEntity(nameValuePairsList, "UTF-8"));
-            //post.setHeader("Content-type", "application/json");
             HttpResponse  response = httpClient.execute(post);
             in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
             System.out.println("(AddRecord)HTTP output: " + in.readLine());

@@ -129,48 +129,6 @@ public class SMSDictionary implements Parcelable {
             }
         }
 
-//        if(longestList.equals("received_longer")) {
-//            for (Map.Entry<String, String> entry : texts_received.entrySet()) {
-//                textInfoList.add(entry.getKey() + "," + entry.getValue());
-//            }
-//            for (Map.Entry<String, String> entry : texts_sent.entrySet()) {
-//                int count = 0;
-//                for (int i = 0; i < textInfoList.size(); ++i) {
-//                    if (textInfoList.get(i).contains(entry.getKey())) {
-//                        textInfoList.set(i, textInfoList.get(i) + "," + entry.getValue());
-//                        count++;
-//                    }
-//                }
-//                if(count == 0)
-//                    noneReceivedMessages.add(entry.getKey()+",0,"+entry.getValue());
-//
-//            }
-//            for(int i = 0; i < noneReceivedMessages.size(); ++i)
-//                textInfoList.add(noneReceivedMessages.get(i));
-//
-//            for(int i = 0; i < textInfoList.size(); ++i){
-//                String[] temp = textInfoList.get(i).split(",");
-//                if(temp.length == 3)
-//                    tempList.add(temp[0]+","+temp[2]+","+temp[1]);
-//                else
-//                    tempList.add(temp[0]+",0,"+temp[1]);
-//            }
-//            textInfoList = tempList;
-//        }
-//        else if(longestList.equals("sent_longer")){
-//            for (Map.Entry<String, String> entry : texts_sent.entrySet()) {
-//                textInfoList.add(entry.getKey() + "," + entry.getValue());
-//            }
-//            for (Map.Entry<String, String> entry : texts_received.entrySet()) {
-//                for (int i = 0; i < textInfoList.size(); ++i) {
-//                    if (textInfoList.get(i).contains(entry.getKey()))
-//                        textInfoList.set(i, textInfoList.get(i) + "," + entry.getValue());
-//                }
-//            }
-//        }
-//        else
-//            System.out.println("Error when filling textInfoList.");
-
         for(int k = 0; k < textInfoList.size(); ++k)
             System.out.println(textInfoList.get(k));
 
@@ -181,36 +139,6 @@ public class SMSDictionary implements Parcelable {
 
     public List<String> getRecords(){
         convertDictToList();
-//        List<String> tempList = new ArrayList<>();
-//        List<String> returnList = new ArrayList<>();
-//
-//        for(int i = 0; i < textInfoList.size(); ++i){
-//            String[] str = textInfoList.get(i).split(",");
-//            if(str.length < 3) {
-//                String[] temp = new String[3];
-//                temp[0] = str[0];
-//                temp[1] = str[1];
-//                temp[2] = "0";
-//                String newVal = temp[0]+","+temp[1]+","+temp[2];
-//                tempList.add(newVal);
-//            }
-//        }
-//
-//        for (Iterator<String> iter = textInfoList.listIterator(); iter.hasNext(); ) {
-//            String[] a = iter.next().split(",");
-//            if (a.length <  3) {
-//                iter.remove();
-//            }
-//        }
-//
-//        for(int i = 0; i < tempList.size(); ++i)
-//            textInfoList.add(tempList.get(i));
-//
-//        for (Iterator<String> iter = textInfoList.listIterator(); iter.hasNext(); ) {
-//            String[] a = iter.next().split(",");
-//            returnList.add(a[0] + "," + a[1] + "," + a[2]);
-//
-//        }
 
         for(int k = 0; k < textInfoList.size(); ++k)
             System.out.println(textInfoList.get(k));

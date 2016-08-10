@@ -86,7 +86,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
         if(parts[0] != null) {
             PrivateData hash = new PrivateData(parts[0].substring(3, parts[0].length()));
             viewHolder.phoneNumberHash.setText(hash.getNumber().substring(1,10));
-            viewHolder.phoneNumber.setText(parts[0]);//.replaceFirst("(\\d{3})(\\d{3})(\\d+)", "($1)-$2-$3"));
+            viewHolder.phoneNumber.setText(parts[0]);
 
         }
         if(parts[1] != null)

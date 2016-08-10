@@ -30,21 +30,11 @@ import java.util.List;
 public class PrivateData{
 
     String number;
-    //SMSDictionary records;
-    //List<String> records;
 
-    PrivateData(String numString){//, List<String> recordsParameter){
+    PrivateData(String numString){
         number = hashMD5(numString);
-        //records = recordsParameter;
     }
 
-//    public void sendToDataBase(){
-//        try {
-//            downloadUrl();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
 
 
 
