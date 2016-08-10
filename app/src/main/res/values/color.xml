@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Customize your theme here. -->
+    <color name="primary">#2196F3</color>
+    <color name="primary_dark">#1976D2</color>
+    <color name="accent">#03A9F4</color>
+
+    <color name="primary_dark0">#00796B</color>
+    <color name="primary_dark1">#FFA000</color>
+    <color name="primary_dark2">#455A64</color>
+    <color name="primary_dark3">#303F9F</color>
+    <color name="primary_dark4">#1976D2</color>
+    <color name="primary_dark5">#689F38</color>
+    <color name="primary_dark6">#D32F2F</color>
+    <color name="primary_dark7">#616161</color>
+    <color name="primary_dark8">#F57C00</color>
+    <color name="primary_dark9">#7B1FA2</color>
+</resources>
+

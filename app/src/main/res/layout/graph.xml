@@ -1,0 +1,177 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:transitionName="@string/transition_name_top"
+        android:background="#2196F3"
+        android:id="@+id/topContainer">
+        <com.github.mikephil.charting.charts.BarChart
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#2196F3"
+            android:id="@+id/chart" />
+        <!--<RelativeLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_below="@id/chart"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_alignParentRight="true">-->
+            <!--<Button-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:id="@+id/MonthView"-->
+                <!--android:text="Month"-->
+                <!--style="?android:attr/borderlessButtonStyle"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:textSize="10dp"/>-->
+            <!--<Button-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:id="@+id/DayView"-->
+                <!--android:text="Day"-->
+                <!--android:layout_toRightOf="@id/MonthView"-->
+                <!--android:layout_toEndOf="@id/MonthView"-->
+                <!--style="?android:attr/borderlessButtonStyle"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:textSize="10dp"/>-->
+        <!--</RelativeLayout>-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:padding="@dimen/activity_vertical_margin"
+        android:id="@+id/exportLayout">
+
+        <TextView
+            android:id="@+id/DETAILS_number_hash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hash"
+            android:layout_centerVertical="true"
+            android:textColor="#000"
+            android:layout_alignParentLeft="true"
+            android:textSize="36sp"
+            android:layout_marginTop="5dp"
+            android:transitionName="@string/transition_name_number"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/DETAILS_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Contact"
+            android:layout_centerVertical="true"
+            android:textColor="#000"
+            android:layout_alignParentLeft="true"
+            android:textSize="36sp"
+            android:layout_marginTop="5dp"
+            android:transitionName="@string/transition_name_number"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/DETAILS_contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Contact"
+            android:layout_centerVertical="true"
+            android:textColor="#000"
+            android:layout_alignParentLeft="true"
+            android:textSize="36sp"
+            android:layout_marginTop="5dp"
+            android:transitionName="@string/transition_name_number" />
+
+
+        <ImageButton
+            android:id="@+id/DETAILS_circle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/oval"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_action_send_now"
+            android:elevation="5dp"
+            android:onClick="onClickFAB"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="0.5dp"
+        android:background="#B6B6B6"
+        android:layout_below="@id/exportLayout"
+        android:id="@+id/div" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/infoLayout">
+
+            <TextView
+                android:id="@+id/DETAILS_receiced_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Received:"
+                android:textColor="#00cc00"
+                android:textSize="24sp"
+                android:layout_centerVertical="true"
+                android:transitionName="@string/transition_name_received_label"/>
+
+            <TextView
+                android:id="@+id/DETAILS_received"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/DETAILS_receiced_label"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:textColor="#00cc00"
+                android:textSize="24sp"
+                android:layout_centerVertical="true"
+                android:transitionName="@string/transition_name_received"/>
+
+            <TextView
+                android:id="@+id/DETAILS_sent_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/DETAILS_received"
+                android:text="Sent:"
+                android:textColor="#1976D2"
+                android:textSize="24sp"
+                android:layout_marginLeft="20dp"
+                android:transitionName="@string/transition_name_sent_label"/>
+
+            <TextView
+                android:id="@+id/DETAILS_sent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/DETAILS_sent_label"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:textColor="#1976D2"
+                android:textSize="24sp"
+                android:transitionName="@string/transition_name_sent"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rv" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

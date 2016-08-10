@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SMS Records</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="title_activity_details">Statistics</string>
+
+    <string name="transition_name_number">transition:NUMBER</string>
+    <string name="transition_name_top">transition:TOP</string>
+    <string name="transition_name_received">transition:RECEIVED</string>
+    <string name="transition_name_sent">transition:SENT</string>
+    <string name="transition_name_received_label">transition:RECEIVEDLabel</string>
+    <string name="transition_name_sent_label">transition:SENTLabel</string>
+
+</resources>
