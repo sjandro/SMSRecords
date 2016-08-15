@@ -370,7 +370,8 @@ public class Utilities {
         AlarmManager am=(AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(context, SendDataToDatabaseBackgroundBroadcast.class);
         PendingIntent pi = PendingIntent.getBroadcast(context, 215215, intent, 0);
-        am.setRepeating(AlarmManager.RTC, System.currentTimeMillis(), 60000 * 30 , pi);
+        intent.putExtra("send_records", true);
+        am.setRepeating(AlarmManager.RTC, System.currentTimeMillis(), 60000 , pi);
     }
 
     public void checkForMessageService(Context context)

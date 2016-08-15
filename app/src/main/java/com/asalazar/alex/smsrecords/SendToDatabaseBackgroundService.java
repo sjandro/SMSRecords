@@ -22,7 +22,7 @@ public class SendToDatabaseBackgroundService extends Service {
 
         utilities.SetAlarm(getApplicationContext());
 
-        utilities.checkForMessageService(getApplicationContext());
+        //utilities.checkForMessageService(getApplicationContext());
 
         super.onCreate();
     }

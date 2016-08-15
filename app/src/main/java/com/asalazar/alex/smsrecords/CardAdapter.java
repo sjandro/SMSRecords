@@ -163,9 +163,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
         intent.putExtras(receivedText);
         intent.putExtras(sentText);
         intent.putExtras(myNumber);
-        //intent.putExtras(recordsBundle);
         animateTransition(view, intent);
-        //startActivity(intent);
     }
 
     public void animateTransition(View view, Intent intent){
@@ -174,8 +172,6 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
 
                 new Pair<View, String>(view.findViewById(R.id.topHalf),
                         activity. getString(R.string.transition_name_top)),
-//                new Pair<View, String>(view.findViewById(R.id.phoneNumberLable),
-//                        getString(R.string.transition_name_number)),
                 new Pair<View, String>(view.findViewById(R.id.received),
                         activity. getString(R.string.transition_name_received)),
                 new Pair<View, String>(view.findViewById(R.id.sent),

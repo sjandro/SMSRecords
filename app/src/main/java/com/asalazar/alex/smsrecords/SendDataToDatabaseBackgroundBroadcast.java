@@ -11,13 +11,13 @@ public class SendDataToDatabaseBackgroundBroadcast extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         System.out.println("SMS Service Started!");
-        if(intent.getBooleanExtra("checking_for_message", false)){
-            System.out.println("checking for message");
-        }
-        else {
+//        if(intent.getBooleanExtra("checking_for_message", false)){
+//            System.out.println("checking for message");
+//        }
+        //else if(intent.getBooleanExtra("send_records", false)){
             Utilities utilities = new Utilities();
             utilities.fetchInbox(context);
-        }
+        //}
         //some comment
         //another comment
     }
